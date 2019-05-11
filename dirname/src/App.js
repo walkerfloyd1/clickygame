@@ -1,31 +1,75 @@
-import React from 'react';
-import Navbar from './components/Nav/Navbar.js';
-import Footer from './components/Footer/Footer.js';
-import Jumbotron from './components/Jumbotron/Jumbotron.js';
-import imageCard from './components/imageCard/imageCard.js';
+import React, { Component } from 'react';
+import Memes from './images.json';
+import Wrapper from './components/Wrapper/Wrapper.js';
+import Jumbotron from './components/Jumbotron/Jumbotron';
+import Card from './components/images/imageCard';
 import './App.css';
 
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    Memes,
+    score: 0,
+  }
+
+  endGame = () => {
+    this.state.Memes.forEach(meme => {
+      meme.count = 0;
+    })
+    this.setState({
+      score: 0
+    });
+    alert('Game Over');
+    return true;
+  }
+
+  winGame = () => {
+    this.state.Memes.forEach(meme=> {
+      meme.count = 0;
+    })
+    this.setState({
+      score: 0,
+      clickedMemes: []
+    })
+    alert('You won!');
+    return true;
+  }
+
+  memeCount = id => {
+    let memeArr = this.state.Memes;
+    memeArr.find((o, i) => {
+      if (o.id === id) {
+        if (Memes[i].count === 0) {
+          Memes[i].count += 1;
+          this.setState({
+            score: this.state.score + 1
+          });
+          Memes.sort(() => Math.random() - 0.5)
+          return true;
+        }
+        else {
+          this.endGame();
+        }
+      }
+      return Memes;
+    })
+    }
+
+  render() {
+    return (
+      <Wrapper>
+        <Jumbotron score={this.state.score} />
+        {this.state.Memes.map(meme => (
+          <Card
+          clickCount={this.memeCount}
+          id={meme.id}
+          key={meme.id}
+          image={meme.image}></Card>
+        ))}
+      </Wrapper>
+    );
+  }
 }
 
 export default App;

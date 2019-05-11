@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Avengers",
+        "image": "https://i.imgur.com/zPAYEDr.jpg",
+        "count": 0
+    },
+    {
+        "id": 2,
+        "name": "Tommy",
+        "image": "https://i.imgur.com/Ai9f4mO.png",
+        "count": 0
+    },
+    {
+        "id": 3,
+        "name": "Ricegum",
+        "image": "https://i.imgur.com/AHvg9LA.jpg",
+        "count": 0
+    },
+    {
+        "id": 4,
+        "name": "Ken Bone",
+        "image": "https://i.imgur.com/YRJ1KhV.jpg",
+        "count": 0
+    },
+    {
+        "id": 5,
+        "name": "Zac",
+        "image": "https://i.imgur.com/4aBtUd2.png",
+        "count": 0
+    },
+    {
+        "id": 6,
+        "name": "Cap",
+        "image": "https://i.imgur.com/haZMr7y.png",
+        "count": 0
+    },
+    {
+        "id": 7,
+        "name": "Avocado Man",
+        "image": "https://i.imgur.com/EU7l4B3.png",
+        "count": 0
+    },
+    {
+        "id": 8,
+        "name": "Download House",
+        "image": "https://i.imgur.com/agBTLQS.jpg",
+        "count": 0
+    }
+    
+]
