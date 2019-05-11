@@ -30,6 +30,7 @@ class App extends Component {
     })
     this.setState({
       score: 0,
+      clickedMemes: []
     })
     alert('You won!');
     return true;
@@ -37,8 +38,8 @@ class App extends Component {
 
   memeCount = id => {
     let memeArr = this.state.Memes;
-    memeArr.find((o, i) => {
-      if (o.id === id) {
+    memeArr.find((a, i) => {
+      if (a.id === id) {
         if (Memes[i].count === 0) {
           Memes[i].count += 1;
           this.setState({
