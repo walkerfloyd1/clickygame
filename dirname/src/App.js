@@ -30,7 +30,6 @@ class App extends Component {
     })
     this.setState({
       score: 0,
-      clickedMemes: []
     })
     alert('You won!');
     return true;

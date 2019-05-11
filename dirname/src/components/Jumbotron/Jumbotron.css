@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+    color: red;
+    margin: 30px;
+}
+#ice {
+    text-align: center;
+    color: lightblue;
+}
+body {
+    background:black;
+}
+h2 {
+    text-align: center;
+    color: orange;
+}
